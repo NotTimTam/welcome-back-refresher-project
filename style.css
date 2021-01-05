@@ -1,0 +1,134 @@
+html {
+    background: url(winter-landscape-forest-publicdomainvectors.org.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section {
+    background-color: #e0fcfc;
+
+    display: flex;
+
+    margin: 15px;
+
+    transition: all 0.3s;
+
+    border-radius: 0.3em;
+}
+
+.section .content {
+    width: 100%;
+    transition: all 0.3s;
+
+    padding: 15px;
+}
+
+.section:hover .content {
+    width: 75%;
+}
+
+.section:hover .solution {
+    width: 25%;
+    margin-left: 50px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+header {
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.solution {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+
+    color: white;
+
+    width: 0%;
+
+    overflow: hidden;
+
+    transition: 0.3s all;
+
+    background: url(winter-forest-publicdomainvectors.org.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: 10px;
+
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+.solution button {
+    width: 100px;
+    height: 50px;
+
+    outline: none;
+    border: none;
+    border-radius: 0.5em;
+
+    background-color: slategray;
+    color: white;
+
+    transition: all 0.3s;
+}
+
+.solution button:hover {
+    background-color: white;
+    color: slategray;
+}
+
+.solution button:active {
+    background-color: darkslategray;
+    color: white;
+}
+
+.solution p {
+    margin: 0;
+
+    color: black;
+
+    padding: 15px;
+
+    border-radius: 0.5em;
+
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    max-width: 1000px;
+}

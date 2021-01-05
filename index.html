@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='author' content='Tim Phillips'>
+    <meta name='description' content='Code problem solving with present wrapping.'>
+
+    <meta property='og:image' content='favicon.png'>
+    <meta property='og:description' content='Code problem solving with present wrapping.'>
+
+    <meta property='og:title' content='Welcome Back Refresher Project'>
+    <title>Welcome Back Refresher Project</title>
+
+    <link rel='stylesheet' href='style.css'>
+    <link rel='shortcut icon' href='favicon.png' type='image/x-icon'>
+</head>
+<body>
+    <header>
+        <h1>Welcome Back Refresher Project</h1>
+        <h2>JS Code Problem Solving With Present Wrapping <p style="font-size: 10px; display: inline; margin-bottom: 10px;">(mouse the over problems)</p></h2>
+    </header>
+
+    <main>
+        <div class="section">
+            <div class="content">
+                <h3>Problem 1</h3>
+                <p>Problem: The elves are building the sleigh that will be carrying all of the presents this year. In order to make sure it's big enough to carry all of the presents, the elves need to know how much volume is taken up by ALL the presents.</p>
+            </div>
+            <div class="solution">
+                <button onclick="q1.innerText = stepOne();">Solve</button>
+                <p id="q1">SOLUTION</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h3>Problem 2</h3>
+                <p>Problem: The elves are trying to wrap all of the presents for christmas. There are 2 different teams working together one that is cutting the boxes of paper for wrapping and one that is doing the wrapping. Find the smallest area square of wrapping paper that you can cut for the box to be completely wrapped. (use the instructions in the picture below to see how elves wrap their gifts and what I mean by square of paper). 
+
+                When trying to find the layout of the square of wrapping paper you need to find the length and width that is the most efficient. This is created with the formula: (2S + L) (2M + 2S) where L is the longest side, S is the smallest side, and M is the middle length side.</p>
+            </div>
+            <div class="solution">
+                <button onclick="q2.innerText = stepTwo();">Solve</button>
+                <p id="q2">SOLUTION</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h3>Problem 3</h3>
+                <p>Problem: The headmaster elf is getting ready to order all of the wrapping paper needed for every wrapping team and he needs to know how much your team needs. The wrapping paper is cut from a giant spool one at a time. It doesn’t matter how tall the paper is, it will always fit the height. Find how much paper you will cut from the giant spool to cover everything with the least amount of waste. (hint: since the height will always fit everything make sure your length you cut is the smallest side.)</p>
+            </div>
+            <div class="solution">
+                <button onclick="q3.innerText = stepThree();">Solve</button>
+                <p id="q3">SOLUTION</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h3>Problem 4</h3>
+                <p>Problem: The elves are putting the finishing touches on the presents, now that the presents are nicely wrapped they all need a bow to make them perfect. The elves will need to find the length around both sides of the present (also known as the perimeter) so there is enough ribbon to make it all the way around. Once they have the right length for the box they need to make sure they add extra for the ribbon equal to the length, width, and height
+
+                The elves know that the easiest way to wrap a ribbon is around the smallest sides and that the perfect length of ribbon for any bow is the same as the volume.</p>
+            </div>
+            <div class="solution">
+                <button onclick="q4.innerText = stepFour();">Solve</button>
+                <p id="q4">SOLUTION</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content">
+                <h3>Problem 5</h3>
+                <p>Problem: There is a new head elf in the workshop and he is all about efficiency. Santa is spending too much time at each house he visits because he needs to place 3 presents at each house. This can be fixed if all 3 presents were wrapped in 1 larger present so just the 1 can be dropped off and save time. Looks like you have to redo some of your calculations.  
+
+                The new packages that you are placing the presents in are always perfect square boxes (10x10x10 or 3x3x3) of any size. Find the smallest box that you can use to perfectly fit all the other boxes. This will take a little thinking and planning with the math but I believe that you can do it.</p>
+            </div>
+            
+            <div class="solution">
+                <button onclick="q5.innerText = stepFive();">Solve</button>
+                <p id="q5">SOLUTION</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright 2021 Tim Phillips</p>
+        <p>Backgrounds: <a href="https://publicdomainvectors.org/">https://publicdomainvectors.org/</a></p>
+    </footer>
+
+    <script>
+        // Assign output values to variables.
+        const q1 = document.getElementById("q1");
+        const q2 = document.getElementById("q2");
+        const q3 = document.getElementById("q3");
+        const q4 = document.getElementById("q4");
+        const q5 = document.getElementById("q5");
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
