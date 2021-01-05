@@ -1117,18 +1117,39 @@ function stepFive() {
     // Calculate the dimensions of each box, find out which size "mega" box is best.
     let overallVolume = 0;
 
+    // Clone main array.
+    let inputcopy = [];
     for (let i = 0; i < input.length; i++) {
-        // Split up the numbers.
-        let currentNums = input[i].split("x");
+        inputcopy[i] = input[i];
+    }
 
-        // Multiply the numbers together.
-        let value = currentNums[0] * currentNums[1] * currentNums[2];
+    // Split up main array.
+    let grouping = [], size = 3;
+    while (inputcopy.length > 0) {
+        grouping.push(inputcopy.splice(0, size));
+    }
 
-        if (value <= 27) {
-            overallVolume += 27;
-        } else {
-            overallVolume += 1000;
+    // Go through each grouping and find the smallest box they each fit in.
+    for (let i = 0; i < grouping.length; i++) {
+        let activeGrouping = grouping[i]
+        let activeSize = [0, 0, 0];
+        // Loup through individual groupings.
+        for (let j = 0; j < activeGrouping.length; j++) {
+            let values = activeGrouping[j].split('x');
+
+            // Loop through numbers in individual groupings.
+            for (let k = 0; k < values.length; k++) {
+                activeSize[k] += Number(values[k])
+            }
+
         }
+
+        let number = Number(Math.max.apply(Math, activeSize)); // Use math.max to find biggest.
+        number = number ** 3;
+
+        overallVolume += number;
+
+        i += 2;
     }
 
     return `${overallVolume} feet^3`;
