@@ -1112,7 +1112,6 @@ function stepFour() {
     return `${ribbonAmount} feet`;
 }
 
-// Problem 5
 function stepFive() {
     // Calculate the dimensions of each box, find out which size "mega" box is best.
     let overallVolume = 0;
@@ -1132,25 +1131,32 @@ function stepFive() {
     // Go through each grouping and find the smallest box they each fit in.
     for (let i = 0; i < grouping.length; i++) {
         let activeGrouping = grouping[i]
-        let activeSize = [0, 0, 0];
+        let number = { box: null, length: 0 };
+        let bigHeight = 0;
         // Loup through individual groupings.
         for (let j = 0; j < activeGrouping.length; j++) {
             let values = activeGrouping[j].split('x');
 
+            bigHeight += Number(Math.max.apply(Math, values));
+
             // Loop through numbers in individual groupings.
-            for (let k = 0; k < values.length; k++) {
-                activeSize[k] += Number(values[k])
+            let biggestSide = Number(Math.max.apply(Math, values));
+            if (biggestSide >= number.length) {
+                number.length = biggestSide;
+                number.box = j;
             }
 
         }
 
-        let number = Number(Math.max.apply(Math, activeSize)); // Use math.max to find biggest.
-        number = number ** 3;
-
-        overallVolume += number;
+        if (bigHeight > number.length) {
+            // Run the formula and add it to the main number.
+            overallVolume += (2 * bigHeight + bigHeight) * ((2 * bigHeight) + (2 * bigHeight));
+        } else {
+            overallVolume += (2 * number.length + number.length) * ((2 * number.length) + (2 * number.length));
+        }
 
         i += 2;
     }
 
-    return `${overallVolume} feet^3`;
+    return `${overallVolume} feet^2`;
 }
